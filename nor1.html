@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Norehan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #ffd6e8, #ffb3d9, #ff9acb);
+      color: #ffffff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 15vh;
+      text-shadow: 0 0 15px #ff69b4, 0 0 30px #ffc1dc;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 15px #ff69b4; }
+      to { text-shadow: 0 0 30px #ffc1dc; }
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 35px;
+      font-size: 1.1em;
+      color: #ff4f9a;
+      background: #fff;
+      border: none;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+    }
+
+    .btn:hover {
+      background: #ff69b4;
+      color: #fff;
+      box-shadow: 0 0 25px #ff69b4;
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 80px 20px;
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .message {
+      font-size: 1.25em;
+      margin-top: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 25px;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1 -->
+  <div id="page1" class="section active">
+    <h1>Happy Birthday, Norehan 🎀</h1>
+    <div class="message">
+      On this special day, I celebrate you.<br>
+      May your birthday be filled with sweet smiles,<br>
+      warm laughter, and beautiful moments 
+    </div>
+    <button class="btn" onclick="goToSurprise()">OPEN 💌</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="page2" class="section">
+    <h1>Happy Birthday Norehan💫</h1>
+    <div class="message">
+      I hope this special day brings you happiness, peace,
+      and everything your heart wishes for.<br>
+      May you always be healthy, loved, and surrounded
+      by people who truly care about you. <br><br>
+
+      I wish you a wonderful birthday and all the happiness in the world.
+      I also want to sincerely apologize for any mistakes I’ve made in the past.<br><br>
+
+      I truly hope you’re not upset with me,
+      and that you can forgive me for all my past mistakes. 
+    </div>
+    <button class="btn" onclick="goBack()">Back 🌷</button>
+  </div>
+
+  <script>
+    function goToSurprise() {
+      document.getElementById('page1').classList.remove('active');
+      document.getElementById('page2').classList.add('active');
+    }
+
+    function goBack() {
+      document.getElementById('page2').classList.remove('active');
+      document.getElementById('page1').classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
